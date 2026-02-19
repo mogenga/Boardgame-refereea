@@ -1,0 +1,5 @@
+pathlib~=1.0.1
+fastapi~=0.128.0
+loguru~=0.7.3
+fitz~=0.0.1.dev2
+pydantic~=2.12.4
