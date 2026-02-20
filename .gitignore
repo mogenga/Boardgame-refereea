@@ -231,3 +231,6 @@ boardgame-referee-requirements.md
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.vscode/
+boardgame-referee-frontend.md
