@@ -207,6 +207,8 @@ marimo/_lsp/
 __marimo__/
 
 .idea
+boardgame-referee-requirements.md
+项目解读.md
 
 # dependencies
 /node_modules
