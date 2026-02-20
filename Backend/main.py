@@ -15,7 +15,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from loguru import logger
 
 # 导入路由模块
-from api import rules
+from api import rules, sessions, state, query
+from core.exceptions import register_exception_handlers
 
 
 @asynccontextmanager
@@ -70,14 +71,17 @@ app.add_middleware(
 # 规则书管理: /api/rules/*
 app.include_router(rules.router, prefix="/api/rules", tags=["规则书管理"])
 
-# TODO Phase 2: 游戏会话管理
-# app.include_router(sessions.router, prefix="/api/sessions", tags=["游戏会话"])
+# 游戏会话管理: /api/sessions/*
+app.include_router(sessions.router, prefix="/api/sessions", tags=["游戏会话"])
 
-# TODO Phase 3: 规则问答
-# app.include_router(query.router, prefix="/api/query", tags=["规则问答"])
+# 状态操作: /api/sessions/* (挂载到 sessions 路径下)
+app.include_router(state.router, prefix="/api/sessions", tags=["状态操作"])
 
-# TODO Phase 2: 状态操作
-# app.include_router(state.router, prefix="/api/state", tags=["状态操作"])
+# 规则问答: /api/query
+app.include_router(query.router, prefix="/api/query", tags=["规则问答"])
+
+# ===== 注册全局异常处理器 =====
+register_exception_handlers(app)
 
 
 # ===== 根路径 =====
