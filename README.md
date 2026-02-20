@@ -1,6 +1,6 @@
 # 桌游规则裁判助手 | Boardgame Referee AI
 
-一个基于 AI 的桌游裁判助手，支持上传规则书、自然语言提问、自动裁定并维护游戏状态。适用于桌游、DND、剧本杀等复杂规则游戏。
+一个基于 LangChain 的桌游裁判助手，支持上传规则书、自然语言提问、自动裁定并维护游戏状态。适用于桌游、DND、剧本杀等复杂规则游戏。
 
 ## ✨ 核心功能
 
@@ -57,7 +57,7 @@ npm start
                               ↓
                        ChromaDB (向量数据库)
                               ↓
-                       Redis (会话状态存储)
+                       内存存储 (会话状态)
 ```
 
 ### 技术栈
@@ -67,7 +67,6 @@ npm start
 - LangChain（RAG 编排）
 - OpenAI GPT-4o（LLM + Function Calling）
 - ChromaDB（向量数据库）
-- Redis（会话存储）
 - PyMuPDF（PDF 解析）
 
 **前端：**
