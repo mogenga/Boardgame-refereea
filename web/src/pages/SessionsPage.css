@@ -1,0 +1,67 @@
+.sessions-page {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.sessions-list h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #e0e6ed;
+}
+
+.session-card {
+  background: rgba(45, 55, 72, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.session-card:hover {
+  transform: translateX(4px);
+  border-color: rgba(66, 153, 225, 0.5);
+}
+
+.session-info {
+  flex: 1;
+}
+
+.session-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.session-icon {
+  font-size: 24px;
+}
+
+.session-game {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e0e6ed;
+}
+
+.session-round {
+  color: #a0aec0;
+}
+
+.session-players {
+  color: #a0aec0;
+  font-size: 14px;
+}
+
+.session-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.session-time {
+  color: #a0aec0;
+  font-size: 14px;
+}

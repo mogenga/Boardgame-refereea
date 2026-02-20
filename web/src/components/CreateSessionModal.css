@@ -1,0 +1,34 @@
+.create-session-modal {
+  max-width: 600px;
+}
+
+.form-input select {
+  cursor: pointer;
+}
+
+.player-input-group {
+  display: grid;
+  grid-template-columns: 2fr 1fr auto;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.player-remove-btn {
+  background: rgba(197, 48, 48, 0.2);
+  border: 1px solid rgba(197, 48, 48, 0.3);
+  color: #fc8181;
+  font-size: 20px;
+  width: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.player-remove-btn:hover {
+  background: rgba(197, 48, 48, 0.3);
+}
+
+.player-remove-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
